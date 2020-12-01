@@ -1,0 +1,25 @@
+.messageLine{/*menssagem linha*/
+    margin-bottom: 10px;/*separar uma mensagem da outra*/
+    display: flex;
+  }
+  .messageItem{ /*mensagem texto e data */
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px #CCC;/*sombreamento*/
+    display: flex;
+    flex-direction: column;/*direcionado em coluna mensagems*/
+    padding: 3px;
+    max-width: 90%;/*largura maxima de texto enviado ..*/
+  }
+  .messageText{/*texto em si */
+    font-size: 14px;
+    margin: 5px 40px 5px 5px;/*cima, direita,baixo,esquerda*/
+  }
+  .messageDate{/*horario */
+    font-size: 11px;
+    color: #999;
+    margin-right: 5px;
+    text-align: right;
+    height: 15px;
+    margin-top: -15px;/*menos a propia altura pra ficar em linha as mensagens até chega final da tela vai abaixo*/
+  }

@@ -1,0 +1,39 @@
+++++++wpp + react + firebase+++++++++
+*npx create-react-app whatsappclone   :terminal na pasta projeto cria o projeto em react do wpp
+
+++++++firebase++++++++++++++
+*firestone: comunicação em tempo real para criar o wpp de mensagens em tempo real
+*npm install firebase: terminal instalação do firebase na pasta de projeto versão @8.1.1
+
++++++++++icones+++++++++++
+*npm install @material-ui/core @material-ui/icons   :terminal baixa todos os icones q o proprio wpp usa
+
+++++++++emojis do wpp++++++++++
+*npm install emoji-picker-react   :terminal baixar emojis do wpp
+
+++++++++obs:++++++++++
+*organizando react.. apaga arquivo setupTest.js, logo.svg, index.css, app.test... entre outros
+
+++++++++icones wpp+++++++++
+https://material-ui.com/pt/components/material-icons/     :site com icones do wpp para importar do site p projeto
+
++++OBS:microfone q transforma som em letras só funciona no browser do google chrome apenas++++++++
+
+++++++++++firebase na pratica+++++++++++++++
+*firebase substitui o servidor(backend as a service BAAS)
+*site firebase da google.. https://console.firebase.google.com/
+* no site clica criar novo projeto > nome projeto: whatsappclone > identificador whatsappclone-ebd08 > continuar normal..>
+* no projeto pagina google clica em Web > apelido app: whatsappclone ..registrar app> mostra codigo para ser adicionado firebaseConfig.js fazendo conexão
+*clica cloud firestone na goole conta > em modo de teste e avançar > banco de dados criado
+
+*sobre login do site vai no firebase clica em authentcation > primeiros passos > users > configurar metodo de login ou sign in method.. para escolher metodo de login email facebook > facebook >
+*https://developers.facebook.com/apps/794921334406026/add/ cria uma conta nesse site facebook developers > coloca id no firebase authentcation facebook > cria login do facebook developers>>
+*>> em configuraçoes de login do facebook coloca URIs de redirecionamento do OAuth válidos pego no firebase > e secret id tbm > e feito só colocar codigo...
+
+*cloud firestore > iniciar uma nova coleção > e recria seu usuario ou chats
+
+
+
+{/* */}
+npm start
+cd .1projetosCode\wppReact\wpp\whatsappclone

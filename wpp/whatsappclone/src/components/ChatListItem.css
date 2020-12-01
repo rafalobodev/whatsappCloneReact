@@ -1,0 +1,59 @@
+.chatListItem{/*area principal css*/
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    height: 70px;
+  }
+  .chatListItem:hover{/*ao passar o mouse hover*/
+    background-color: #F5F5F5;/*branco mais fraco fundo transparente*/
+  }
+  .chatListItem.active{/*active for true muda cor */
+    background-color: #EBEBEB;
+  }
+  .chatListItem--avatar{/*foto usuarios*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;/*avatar é redondo borda*/
+    margin-left: 15px;/*descolar lateral da tela*/
+  }
+  .chatListItem--lines{/*linha da mensagem*/
+    flex: 1;/*para pegar todo espaço disponivel daquela div*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;/*1 item abaixo do outro*/
+    justify-content: center;/*alinha nome no centro certinho*/
+    border-bottom: 1px solid #EEE;/*espaçamento a direita apenas*/
+    padding-right: 15px;/*direita*/
+    margin-left: 15px;
+  
+    /* cheat para ... do ultimo paragrafo ter 3 pontinhos abaixo */
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+  .chatListItem--line{/*uma linha especifica*/
+    display: flex;/*padrão ficar um embaixo do outro*/
+    justify-content: space-between;/*nome lado esquerdo e hora lado direito*/
+    align-items: center;/*centrliza tudo*/
+    width: 100%;  
+  }
+  .chatListItem--name{
+    font-size: 17px;/*tamanho e da letra e cor nome dos usuarios*/
+    color: #000;
+  }
+  .chatListItem--date{/*horarios*/
+    font-size: 12px;
+    color: #999;
+  }
+  .chatListItem--lastMsg{/*ultima mensagem lado esquerdo*/
+    font-size: 14px;
+    color: #999;
+    display: flex;
+    width: 100%;
+  }
+  .chatListItem--lastMsg p{/*css no p paragrafo da last mensagem*/
+    /* cheat para ... */
+    overflow: hidden;/*ocultar paragrafo*/
+    white-space: nowrap;/*tudo em uma linha*/
+    text-overflow: ellipsis;/*ficar 3 pontinhos caso ocupe toda caixa de ultima mensagem*/
+    margin: 0;
+  }

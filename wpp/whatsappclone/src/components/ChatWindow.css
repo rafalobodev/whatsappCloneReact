@@ -1,0 +1,117 @@
+.chatWindow {/*div principal */
+    display: flex;/*posicionamento das divs*/
+    flex-direction: column;/*um item abaixo do outro as divs*/
+    height: 100%;/*todas divs 100% altura ocupada divididas*/
+  }
+
+  /* */
+
+  .chatWindow--header{/*cabeçario*/
+    height: 60px;
+    border-bottom: 1px solid #CCC;/*borda linha 1pxEspessura, cor#CCC*/
+    display: flex;
+    justify-content: space-between;/*espaçamento entre*/
+    align-items: center;
+  }
+  .chatWindow--headerinfo{/*area de informaçoes do usuario*/
+    display: flex;
+    align-items: center;
+    cursor: pointer;/*cursor de mãozinha*/
+  }
+  .chatWindow--avatar{/*foto*/
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 15px;  
+  }
+  .chatWindow--name{/*nome pessoa*/
+    font-size: 17px;
+    color: #000;
+  }
+  .chatWindow--headerbuttons{/*botoes cabeçario*/
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  .chatWindow--btn{/*botoes cada um..*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;/* esconde o icone x de emoji só aparece para fechar o emoji opçoes de escolher */
+    transition: all ease 0.3s;/*animação ao abrir opção emojis visualmente bonito*/
+  }
+  
+  /*  */
+  
+  .chatWindow--body{/*corpo*/
+    flex: 1;/*ocupar todo o corpo*/
+    overflow-y: auto;/*scrol de rolagem das mensagens*/
+    background-color: #E5DDD5;
+    background-size: cover;/*tamanho da imagem de fundo cobre toda a div corpo*/
+    background-position: center;/*centraliza imagem fundo*/
+    /* background-position: top; *//*deixando top ao inves de center o fundo não se meche ao clicar em emojis*/
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');/*imagem usada*/
+    padding: 20px 30px;/*altura, largura*/
+  }
+  .chatWindow--body::-webkit-scrollbar{/*barra rolagem chat body*/
+    width: 6px;
+    height: 6px;
+  }
+  .chatWindow--body::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,.2);
+  }
+  
+  /*  */
+  
+  .chatWindow--footer{/*footer digitavel*/
+    height: 62px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chatWindow--pre{/*footer esquerda*/
+    display: flex;
+    margin: 0 15px;
+  }
+  
+  .chatWindow--inputarea{/*meio a direita footer digita mensagens*/
+    flex: 1;/*tomar area toda*/
+  }
+  
+  .chatWindow--input{/*meio imput footer digitavel especifico */
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: #FFF;
+    border-radius: 20px;/*mais ou menos arredondado*/
+    font-size: 15px;
+    color: #4A4A4A;
+    padding-left: 15px;
+  }
+  
+  .chatWindow--pos{/*footer direita enviar icone*/
+    display: flex;
+    margin: 0 15px;
+  }
+  
+  .chatWindow--emojiarea{
+    height: 200px;
+    overflow-y: hidden;/*scroll rolagem e hidden não tanpar a area digitavel*/
+    transition: all ease .3s;/*movimentação em 3 segundos com css para abrir o emoji area a 200px*/
+  }
+  
+  aside.emoji-picker-react{/*ajustando todos os emojis*/
+    width: auto;
+    background: none;  
+  }
+  
+  .emoji-picker-react .emoji-group:before{/*parte especifica emojis*/
+    background: none;
+    top: inherit;  
+  }

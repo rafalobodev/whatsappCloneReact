@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;/*A propriedade CSS nos permite incluir o preenchimento e a borda na largura e altura total de um elemento.box-sizing*/
+  }
+
+  body {/*corpo do site*/
+    background-color: #D2DBDC;/*cor geral*/
+    margin: 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial;/*lista de prioridades de familias de fontes, se n tiver uma vai a proxima,*/  
+  }
+
+  .app-window{/*tag css janela no geral*/
+    display: flex;/*posição janela*/
+    height: 100vh;/*100% altura vertical*/
+    background-color: #EDEDED;/*cor da janela*/
+  }
+
+  .sidebar{/*lado esquerdo wpp*/
+    width: 35%;/*% da %total da tela do usuario*/
+    max-width: 415px;/*tamanho maximo limite pixel*/
+    display: flex;/*flex para criar posicionamento*/
+    flex-direction: column;/*em coluna um abaixo do outro*/
+    border-right: 1px solid #DDD;/*borda lateral direita*/
+  }
+
+  header {/*area geral cabeçario*/
+    height: 60px;
+    display: flex;/*alinhar de uma lado ao outro*/
+    justify-content: space-between;/*espaçamento entre eles itens organizar*/
+    align-items: center;/*centraliza*/
+    padding:0 15px;/*cima 0 , baixo 15px descolar*/
+  }
+
+  .header--avatar{/*tamanho avatar usuario*/
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;/*para avatar ficar arredondado*/
+    cursor: pointer;/*clicavel muda cursor ponto indicador*/
+  }
+  
+  .header--buttons{
+    display: flex;
+  }
+
+  .header--btn{/*botoes do cabeçario lado esquerdo*/
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;/*deixa area circular geral icones*/
+    display: flex;
+    justify-content: center;/*deixa itens centralizado*/
+    align-items: center;/*centraliza*/
+    cursor: pointer;
+  }
+
+  .search{/*pesquisa wpp q possue search--input dentro + lupa*/
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #EEE;/*borda mais fina*/
+    padding: 5px 15px;/*5px embaixo, laterais 15px*/
+  }
+  .search--input{/*barra de pesquisa*/
+    background-color: #FFF;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;/*icone na esquerda em campo preenchimento separados*/
+    align-items: center;
+    padding: 0 10px;/*0 emcima e embaixo, 10 lateral*/
+  }
+
+  .search--input input{/*foca input barra apenas q fica dentro da class name search--input*/
+    flex: 1;/*para pegar o espaço disponivel */
+    border: 0;/*sem borda*/
+    outline: 0;/*sem arredondamento dentro da barra q vem padrão ao clicar */
+    background-color: transparent;/*se mudar cor fica transparente */
+    margin-left: 10px;/*margem esquerda ou seja vai um pouco a direita*/
+  }
+
+  .chatlist{
+    flex: 1;/*pega todos espaço disponivel*/
+    background-color: #FFF;/*flex 1 cor branca fundo*/
+    overflow-y: auto; /*para ter uma barrinha de rolagem caso tenha muitos chats*/
+  }
+
+  .chatlist::-webkit-scrollbar{/*barra de rolagem lado esquerdo*/
+    width: 6px;/*afinando barra de rolagem*/
+    height: 6px;
+  }
+  .chatlist::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,.2);/*cor da barra de rolagem a esquerda, 0.2 da um transparencia de 20% pra barra*/
+  }
+
+  /*lado direito wpp */
+  .contentarea{
+    flex: 1;  /*para pegar toda a tela*/
+  }
