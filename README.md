@@ -1,6 +1,6 @@
 # whatsappClone
 
-* whatsapp envia mensagem, converte audio em string com login e conexão por conta do facebook usando firebase
+* envia mensagem, converte audio em string com login e conexão por conta do facebook usando firebase
 
 ## dependencias
 * react
